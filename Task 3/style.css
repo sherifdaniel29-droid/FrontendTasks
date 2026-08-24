@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #161618; 
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.box {
+    padding: 20px 40px;
+    border: 3px solid #ffffff;
+    border-radius: 12px;
+    position:relative;
+}
+.text {
+    margin: 0;
+    font-size: 5rem;
+    color: #ffffff;
+    letter-spacing: 4px;
+}
+.black {
+    background-color: #161618;
+    height:10px;
+    width:100px;
+    position:absolute;
+    top: 397px;
+    left:320px;
+
+}
