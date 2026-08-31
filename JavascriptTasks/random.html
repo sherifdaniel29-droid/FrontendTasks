@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Fortune Button</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #e0f2f1;
+            border: 1px solid #a5d6a7;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #b2dfdb;
+        }
+
+        #fortuneDisplay {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Magic Fortune Button 🧙‍♂️</h1>
+    
+    <button id="fortuneButton">Get Your Fortune 🔮</button>
+    
+    <p id="fortuneDisplay"></p>
+
+    <script>
+        const fortunes = [
+            "You will dream in JavaScript tonight.",
+            "A stubborn bug will soon reveal its secret.",
+            "Your code will run flawlessly on the first try.",
+            "An unexpected coffee will bring you great inspiration.",
+            "You will soon master a new programming concept.",
+            "Your final project will impress everyone."
+        ];
+
+        const button = document.getElementById('fortuneButton');
+        const display = document.getElementById('fortuneDisplay');
+        button.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * fortunes.length);
+
+            display.textContent = fortunes[randomIndex];
+        });
+    </script>
+
+</body>
+</html>
