@@ -15,10 +15,6 @@ function displayMovies(movies) {
     movies.forEach(movie => {
 
         const { title, poster_path, vote_average, overview } = movie;
-
-        const shortOverview = overview.length > 100 
-            ? overview.substring(0, 1000)
-            : overview;
     
         const rating = vote_average.toFixed(1);
 
@@ -31,7 +27,7 @@ function displayMovies(movies) {
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title fw-bold">${title}</h5>
                     <p class="card-text text-light opacity-75" style="font-size: 0.9rem;">
-                        ${shortOverview}
+                        ${overview}
                     </p>
                     <div class="mt-auto">
                         <span class="badge bg-warning text-dark fs-6 rounded-1 px-2 py-1">${rating}</span>
